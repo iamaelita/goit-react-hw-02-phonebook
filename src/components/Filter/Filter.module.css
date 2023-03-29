@@ -1,0 +1,25 @@
+.name {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #3b1531;
+}
+
+.input {
+    display: block;
+    width: 150px;
+    height: 22px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: #070707;
+    
+
+}
+
+input:focus,
+input:hover {
+    outline: none;
+}
