@@ -18,10 +18,10 @@ export class App extends Component {
   };
 
   addContact = ({ name, number }) => {
-    const isAlreadyExists = this.state.contacts.some(
+    const isAlreadyExist = this.state.contacts.some(
       contact => contact.name.toLowerCase() === name.toLowerCase()
     );
-   if (isAlreadyExists) {
+   if (isAlreadyExist) {
      alert(name + ' is already in contacts');
      return;
    }
@@ -55,7 +55,7 @@ export class App extends Component {
           <ContactForm onSubmit={this.addContact} />
         </Section>
         <Section title="Contacts">
-          <Filter changeInput={this.changeInput} />
+          <Filter value={filter} changeInput={this.changeInput} />
           <ContactList
             contacts={filterContacts}
             deleteContact={this.deleteContact}
