@@ -8,7 +8,8 @@ export function Filter({ name, changeInput }) {
       <input
         className={css.input}
         type="text"
-        name={name}
+         name="filter"
+       value={name}
         onChange={changeInput}
       />
     </label>

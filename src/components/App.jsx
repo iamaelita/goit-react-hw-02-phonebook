@@ -55,7 +55,7 @@ export class App extends Component {
           <ContactForm onSubmit={this.addContact} />
         </Section>
         <Section title="Contacts">
-          <Filter name={'filter'} changeInput={this.changeInput} />
+          <Filter changeInput={this.changeInput} />
           <ContactList
             contacts={filterContacts}
             deleteContact={this.deleteContact}
