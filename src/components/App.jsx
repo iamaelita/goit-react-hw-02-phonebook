@@ -18,8 +18,10 @@ export class App extends Component {
   };
 
   addContact = ({ name, number }) => {
-   const names = this.state.contacts.map(contact => contact.name);
-   if (names.indexOf(name) >= 0) {
+    const isAlreadyExists = this.state.contacts.some(
+      contact => contact.name.toLowerCase() === name.toLowerCase()
+    );
+   if (isAlreadyExists) {
      alert(name + ' is already in contacts');
      return;
    }
